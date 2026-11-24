@@ -2,12 +2,26 @@
 from __future__ import annotations
 
 import tkinter as tk
+from pathlib import Path
 from tkinter import ttk
 
 from .theme import COLORS, FONTS, sev_color
 
 _SEV_LABEL = {"high": "HIGH", "medium": "MEDIUM", "low": "LOW", "good": "GOOD", "info": "INFO"}
 WRAP = 780  # fixed wrap width, for callers that don't want automatic wrapping
+LOGO_PATH = Path(__file__).resolve().parent.parent / "assets" / "logo.png"
+
+
+def load_logo(master, subsample=1):
+    """Load assets/logo.png as a Tk image. Tk's own PhotoImage reads PNG (8.6+),
+    so this stays standard-library-only. `subsample` shrinks it by an integer
+    factor. Returns None if the file can't be loaded, so callers fall back to
+    the hand-drawn block-letter banner."""
+    try:
+        img = tk.PhotoImage(master=master, file=str(LOGO_PATH))
+    except tk.TclError:
+        return None
+    return img.subsample(subsample, subsample) if subsample > 1 else img
 
 
 # ---------------------------------------------------------------- text

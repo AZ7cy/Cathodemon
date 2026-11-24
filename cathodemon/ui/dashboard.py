@@ -5,7 +5,7 @@ import tkinter as tk
 
 from ..core import blocklist, securemsg
 from ..theme import COLORS, FONTS
-from ..widgets import Panel, lab, muted, small
+from ..widgets import Panel, lab, load_logo, muted, small
 from . import banner as block_letters
 from .base import BaseView, PADX
 
@@ -29,7 +29,11 @@ class DashboardView(BaseView):
         super().__init__(app, master)
         top = tk.Frame(self.content, bg=COLORS["bg"])
         top.pack(fill="x", padx=PADX, pady=(32, 8))
-        lab(top, _BANNER, fg=COLORS["green"], font=FONTS["banner"]).pack(anchor="w")
+        self._logo = load_logo(self, 2)  # ~256px; kept as an attribute so Tk won't drop it
+        if self._logo is not None:
+            tk.Label(top, image=self._logo, bg=COLORS["bg"]).pack(anchor="w")
+        else:
+            lab(top, _BANNER, fg=COLORS["green"], font=FONTS["banner"]).pack(anchor="w")
         lab(top, "A home security suite. Old tech, modern problems.", fg=COLORS["text"],
             font=FONTS["h2"]).pack(anchor="w", pady=(14, 4))
         muted(top, "Pick a tool to start. Everything runs on this computer, and the code is built "

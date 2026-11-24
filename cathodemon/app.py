@@ -4,6 +4,7 @@ from __future__ import annotations
 import tkinter as tk
 
 from .theme import COLORS, FONTS, apply_theme
+from .widgets import load_logo
 from .ui.dashboard import DashboardView
 from .ui.mail_view import MailView
 from .ui.recon_view import ReconView
@@ -67,6 +68,13 @@ class App:
         root.geometry(f"{width}x{height}+{max(0, (sw - width) // 2)}+20")
         root.minsize(min(980, width), min(640, height))
         apply_theme(root)
+
+        self._icon = load_logo(root, 16)  # window and taskbar icon; kept referenced
+        if self._icon is not None:
+            try:
+                root.iconphoto(True, self._icon)
+            except tk.TclError:
+                pass
 
         self.status = tk.Label(root, text="ready", bg=COLORS["sidebar"], fg=COLORS["faint"],
                                font=FONTS["small"], anchor="w", padx=14, pady=5)
