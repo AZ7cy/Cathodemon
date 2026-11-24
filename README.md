@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Cathodemon logo" width="320">
+</p>
+
 # CATHODEMON
 
 > A retro-terminal home security suite. **Old tech, modern problems.**

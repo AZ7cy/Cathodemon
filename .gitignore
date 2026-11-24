@@ -11,5 +11,14 @@ venv/
 # Local-only demo recorder (not part of the shipped project)
 scripts/demo.py
 
+# Secrets and exported keys (Mail can export a private key as .asc; never commit one)
+*.asc
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+
 # OS / editor
 .DS_Store
+Thumbs.db
