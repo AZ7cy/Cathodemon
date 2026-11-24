@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Import audit after saving a Python file",
+      "trigger": "PostFileSave",
+      "description": "Keeps Cathodemon standard-library only: after the agent saves a .py file, it must run the import audit and fix anything it reports.",
+      "matcher": "\\.py$",
+      "action": {
+        "type": "agent",
+        "prompt": "A Python file was just saved. Run `python scripts/audit_imports.py` now. If it reports a third-party import, a dynamic import, exec or eval, replace that code with standard-library code before doing anything else, then tell the owner what you changed. The own-code-only steering rules apply."
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Import audit after creating a Python file",
+      "trigger": "PostFileCreate",
+      "description": "Same check as the save hook, for new .py files the agent creates.",
+      "matcher": "\\.py$",
+      "action": {
+        "type": "agent",
+        "prompt": "A new Python file was just created. Run `python scripts/audit_imports.py` now. If it reports a third-party import, a dynamic import, exec or eval, replace that code with standard-library code before doing anything else, then tell the owner what you changed. The own-code-only steering rules apply."
+      }
+    }
+  ]
+}

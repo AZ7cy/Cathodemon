@@ -1,0 +1,129 @@
+# Cathodemon DNS Shield - built-in blocklist
+#
+# Written for Cathodemon. One domain per line; blocking a domain also blocks
+# every name under it (blocking doubleclick.net blocks ad.doubleclick.net).
+# Only domains whose job is ads, tracking or telemetry are listed, so normal
+# sites keep working. Add your own entries in the DNS Shield tab.
+#
+# Phishing look-alikes (g00gle.com, paypal-secure-login.com...) are caught by
+# Cathodemon's smart blocking instead of a list, because new ones appear daily.
+
+# --- Advertising networks -----------------------------------------------
+doubleclick.net
+googlesyndication.com
+googleadservices.com
+googletagservices.com
+adservice.google.com
+2mdn.net
+admob.com
+adnxs.com
+adsrvr.org
+amazon-adsystem.com
+criteo.com
+criteo.net
+taboola.com
+outbrain.com
+pubmatic.com
+rubiconproject.com
+openx.net
+casalemedia.com
+indexww.com
+adform.net
+smartadserver.com
+moatads.com
+media.net
+yieldmo.com
+sharethrough.com
+triplelift.com
+3lift.com
+33across.com
+bidswitch.net
+contextweb.com
+revcontent.com
+mgid.com
+propellerads.com
+popads.net
+popcash.net
+adcolony.com
+inmobi.com
+chartboost.com
+vungle.com
+unityads.unity3d.com
+ads.yahoo.com
+advertising.com
+serving-sys.com
+adroll.com
+teads.tv
+spotxchange.com
+lijit.com
+gumgum.com
+adition.com
+an.yandex.ru
+
+# --- Analytics and cross-site tracking --------------------------------------
+google-analytics.com
+googletagmanager.com
+app-measurement.com
+scorecardresearch.com
+quantserve.com
+quantcount.com
+hotjar.com
+mixpanel.com
+segment.io
+amplitude.com
+heapanalytics.com
+fullstory.com
+mouseflow.com
+crazyegg.com
+clarity.ms
+chartbeat.com
+chartbeat.net
+nr-data.net
+omtrdc.net
+demdex.net
+2o7.net
+everesttech.net
+krxd.net
+bluekai.com
+exelator.com
+rlcdn.com
+agkn.com
+mathtag.com
+tapad.com
+tealiumiq.com
+mc.yandex.ru
+bat.bing.com
+analytics.tiktok.com
+analytics.twitter.com
+ads-twitter.com
+ads.linkedin.com
+snap.licdn.com
+# Facebook's tracking pixel. Blocking it also stops "Log in with Facebook"
+# buttons on other websites; remove this line if you use them.
+connect.facebook.net
+
+# --- Device and operating-system telemetry ---------------------------------
+vortex.data.microsoft.com
+vortex-win.data.microsoft.com
+telemetry.microsoft.com
+samsungacr.com
+samsungads.com
+lgsmartad.com
+device-metrics-us.amazon.com
+device-metrics-us-2.amazon.com
+tracking.miui.com
+
+# --- Cryptocurrency mining in the browser ---------------------------------
+coinhive.com
+coin-hive.com
+crypto-loot.com
+jsecoin.com
+minero.cc
+coinimp.com
+
+# --- IP loggers (links that reveal who clicked them) ----------------------
+iplogger.org
+iplogger.com
+iplogger.ru
+2no.co
+grabify.link

